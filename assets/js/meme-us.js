@@ -21,15 +21,18 @@ var memic = {
             if (giphies.hasOwnProperty(key)) {
                 const giph = giphies[key];
                 //make a gif
-                console.log(giph);
+                // console.log(giph);
+                memic.makeGif(giph);
             }
         }
     },
     buttonBubbler: function(){},
     gifBubbler: function(){},
-    giphyGetter: function($queryString){
+    giphyGetter: function(queryString){
+        var secretSauce = 'meme ';
+
         var paramString = $.param({
-            q: $queryString,
+            q: secretSauce + queryString,
             limit: 10,
             rating: "g",
             fmt: "json"
