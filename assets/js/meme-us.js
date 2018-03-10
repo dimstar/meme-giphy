@@ -4,21 +4,21 @@ var memic = {
         // bubble the gif buttons to call the giphyGetter
         $(document.body).on('click', '.gif-button', function(){
             event.preventDefault();
-            console.log(this);
+            // console.log(this);
             memic.giphyGetter($(this).val());
         });
         
         // bubble the gif clicks
         $(document.body).on('click', '.gif', function(){
             event.preventDefault();
-            console.log(this);
+            //console.log(this);
             memic.gifLooper(this);
         });
 
         // bubble the button that grabs the input
         $(document.body).on('click', '.makeButton', function(event){
             event.preventDefault();
-            console.log(this);
+            //console.log(this);
             memic.makeButton( $('#memeInput').val() );
             // clear meme intake
             $('#memeInput').val('');
@@ -43,13 +43,13 @@ var memic = {
         // loop array
         this.baseMemes.forEach(function(maybeMeme){
             //make a button
-            console.log("make me a meme:" + maybeMeme)
+            //console.log("make me a meme:" + maybeMeme)
             memic.makeButton(maybeMeme);
         });
     },
     makeGif: function(giph, counter){
-        console.log("be still: " + giph.images.original_still.url);
-        console.log("be loopy: " + giph.images.original.url);
+        //console.log("be still: " + giph.images.original_still.url);
+        //console.log("be loopy: " + giph.images.original.url);
         
         var loopy = giph.images.original.url;
         var still = giph.images.original_still.url;
@@ -85,7 +85,7 @@ var memic = {
             if (giphies.hasOwnProperty(key)) {
                 const giph = giphies[key];
                 //make a gif
-                // console.log(giph);
+                // //console.log(giph);
                 memic.makeGif(giph, cnt);
                 cnt++;
             }
@@ -126,14 +126,14 @@ var memic = {
             url: queryURL,
             method: "GET"
         }).done(function(response){
-            console.log(response.data);
+            //console.log(response.data);
             
             // make all giphs            
             memic.makeAllGifs(response.data);
 
         }).fail(function(response){
             alert("Sorry looks like giphy got ");
-            console.log(response);
+            //console.log(response);
         });
     }
 }
