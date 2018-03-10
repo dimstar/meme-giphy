@@ -11,12 +11,62 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <br><br>
+                <h1 class="text-center">ALL YOUR MEME ARE BELONG TO US</h1>
+                <div class="row m-4">
+                    <div class="col-sm-1">
+                            
+                    </div>
+                    <div class="col-sm-7">
+                            <input id="memeInput" placeholder="GIVE US SOME MEME FUEL" class="form-control mx-sm-3 mb-2" type="text" />
+                    </div>
+                    <div class="col-sm-3">
+                            <button class="btn btn-success mb-2 makeButton">MEME IT</button>
+                    </div>
+                    <div class="col-sm-1">
+                            
+                    </div>
+                </div>
+            </div>
+            <div id="buttonWrapper" class="col-sm-12">
+
+            </div>
+            <div class="col-sm-12">
+                <div class="row" id="gifWrapper">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./assets/js/masonry.js"></script>
     <script src="./assets/js/meme-us.js"></script>
+    <script>
+        var $grid = {};
+        $(document).ready(function(){
+            
+        });
+        $( document ).ajaxComplete(function() {
+            // alert("masonry");
+
+            // var $grid = $('#gifWrapper').masonry({
+            //     columnWidth: '.img-1',
+            //     itemSelector: '.gif',
+            //     percentPosition: true
+            // });
+
+            // $grid.masonry("reloadItems");
+        });
+    </script>
   </body>
 </html>

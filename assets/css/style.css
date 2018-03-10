@@ -1,0 +1,27 @@
+.btn.btn-success {
+    width: 100%;
+}
+
+#gifWrapper {
+    /* margin-right: -1%; */
+}
+
+.gif-box {
+    overflow: hidden;
+    height: 200px;
+    margin-bottom: 1em;
+    border-radius: 6px;
+    margin-right: 10px;
+    max-width: 24%;
+    float: left;
+
+}
+
+.gif-box .gif {
+    width: 110%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
